@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".FormLogin">
+
+    <ImageView
+        android:id="@+id/imageIdViewLogo"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo" />
+
+    <View
+        android:id="@+id/containerIdComponentsLogin"
+        style="@style/ContainerComponents"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageIdViewLogo"
+        />
+
+    <EditText
+        android:id="@+id/EditTextIdEmailLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:drawableLeft="@drawable/ic_email"
+        android:hint="@string/EditTextEmailLogin"
+        style="@style/Edit_Text"
+        app:layout_constraintEnd_toEndOf="@+id/containerIdComponentsLogin"
+        app:layout_constraintStart_toStartOf="@+id/containerIdComponentsLogin"
+        app:layout_constraintTop_toTopOf="@+id/containerIdComponentsLogin"
+        />
+
+    <EditText
+        android:id="@+id/EditTextIdSenhaLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:drawableLeft="@drawable/ic_lock"
+        android:hint="@string/EditTextSenhaLogin"
+        style="@style/Edit_Text"
+        app:layout_constraintEnd_toEndOf="@+id/containerIdComponentsLogin"
+        app:layout_constraintStart_toStartOf="@+id/containerIdComponentsLogin"
+        app:layout_constraintTop_toBottomOf="@+id/EditTextIdEmailLogin"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/ButtonIdLogar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/ButtonLogin"
+        style="@style/Button"
+        app:layout_constraintEnd_toEndOf="@+id/containerIdComponentsLogin"
+        app:layout_constraintStart_toStartOf="@+id/containerIdComponentsLogin"
+        app:layout_constraintTop_toBottomOf="@+id/EditTextIdSenhaLogin" />
+
+    <ProgressBar
+        android:id="@+id/ProgressBarIdLogin"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@+id/containerIdComponentsLogin"
+        app:layout_constraintStart_toStartOf="@+id/containerIdComponentsLogin"
+        app:layout_constraintTop_toBottomOf="@+id/ButtonIdLogar"  />
+
+    <TextView
+        android:id="@+id/TextViewIdCadastroLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/TextViewIdCadastroLogin"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/TextViewIdRecuperarSenhaLogin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/containerIdComponentsLogin"
+        />
+
+    <TextView
+        android:id="@+id/TextViewIdRecuperarSenhaLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/TextViewIdRecuperarSenhaLogin"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/TextViewIdCadastroLogin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/containerIdComponentsLogin"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
